@@ -3,14 +3,14 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
-trait SluggableTrait {
+trait Sluggable {
 
 	/**
 	 * Boot the sluggable trait for a model.
 	 *
 	 * @return void
 	 */
-	public static function bootSluggableTrait()
+	public static function bootSluggable()
 	{
 		$name = static::getDisplayNameColumn();
 		$slug = static::getSlugColumn();
