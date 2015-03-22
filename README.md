@@ -12,6 +12,7 @@ A trait you can apply to Eloquent models to have slugs automatically generated o
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use MartinBean\Database\Elouqent\Sluggable;
 
 class Item extends Model {
 
@@ -27,6 +28,7 @@ If you need to change these, you can do so via class constants:
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use MartinBean\Database\Elouqent\Sluggable;
 
 class Item extends Model {
 
