@@ -3,7 +3,6 @@
 A trait you can apply to Eloquent models to have slugs automatically generated on save.
 
 <br>
-<br>
 
 ## Installation
 
@@ -46,7 +45,7 @@ If you need to change these, you can do so via class constants:
 ### Regenerating Slugs ###
 By default, the trait will not overwrite slugs if there is already a value in the model's slug column. To override, this feature, the slug column should be set to null prior to calling the model's save function. E.g.
 
-    $mymodel-> = '';
+    $mymodel->myslugcolumn = '';
     $mymodel->save();
 
 
@@ -85,7 +84,8 @@ To generate a runtime prefix to prepend to the slug counter when generating a un
     
     	const SLUGGABLE_SLUG_COLUMN = 'headline';
     	const SLUGGABLE_NAME_COLUMN = 'seo_url';
-		const SLUGGABLE_UNIQUE_PREFIXER = 'news';  // this will be ignored if a method is present
+		// SLUGGABLE_UNIQUE_PREFIXER will be ignored if a sluggableUniquePrefixer method is present
+		const SLUGGABLE_UNIQUE_PREFIXER = 'news';  
 
 
 	    public function sluggableUniquePrefixer() {
@@ -98,7 +98,6 @@ To generate a runtime prefix to prepend to the slug counter when generating a un
 
 
 
-<br>
 <br>
 
 ## License
