@@ -18,7 +18,7 @@ trait Sluggable {
 		$callback = function(Model $model) use ($name, $slug)
 		{
             // Generate a unique slug, only if the slug is not already set
-            if ($model->slug == '') {
+            if ($model->$slug == '') {
                 $workingSlug = Str::slug($model->$name);
                 $workingModel = clone $model; // work with a cloned copy of the model for testing existing slugs
                 $count = 0;
