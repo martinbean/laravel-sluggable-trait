@@ -17,7 +17,9 @@ trait Sluggable {
 
 		$callback = function(Model $model) use ($name, $slug)
 		{
-			$model->$slug = Str::slug($model->$name);
+			$model->$slug = isset($model->$slug)
+				? Str::slug($model->$slug)
+				: Str::slug($model->$name);
 		};
 
 		static::registerModelEvent('saving', $callback, 0);
