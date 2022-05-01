@@ -16,7 +16,7 @@ trait Sluggable
     {
         static::saving(function (Model $model) {
             if (empty($model->getSlug())) {
-                $model->setSlug(Str::slug($model->getSluggableString()));
+                $model->setSlug(Str::slug($model->getSluggableString(),$this->getSlugCharacter()));
             }
         });
     }
@@ -62,5 +62,15 @@ trait Sluggable
     public function getSluggableString()
     {
         return $this->getAttribute('name');
+    }
+
+    /**
+     * Allows overriding the character used in slugs.
+     *
+     * @return string
+     */
+    public function getSlugCharacter()
+    {
+        return '-';
     }
 }

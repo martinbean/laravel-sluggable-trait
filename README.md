@@ -82,6 +82,19 @@ public function getSluggableString()
 }
 ```
 
+The `getSlugCharacter()` should return the character you want to use as
+replacement in slugs.  Default is dash (-).
+
+```php
+/**
+ * Allows overriding the character used in slugs.
+ */
+public function getSlugCharacter()
+{
+	return '_';
+}
+```
+
 ## License
 
 Licensed under the [MIT Licence](LICENSE.md).
