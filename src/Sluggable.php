@@ -1,6 +1,6 @@
 <?php
 
-namespace MartinBean\Database\Eloquent;
+namespace mvnrsa\Database\Eloquent;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
@@ -71,6 +71,6 @@ trait Sluggable
      */
     public function getSlugCharacter()
     {
-        return '-';
+        return '_';
     }
 }

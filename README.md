@@ -1,10 +1,13 @@
 # Laravel Sluggable Trait
 
-A trait you can apply to Eloquent models to have slugs automatically generated on save.
+A trait you can apply to Eloquent models to have slugs automatically generated on save.  
+This is a slight improvement on martinbean/laravel-sluggable-trait to allow the slug
+character to be changed from dash to underscore (by default) or any character of
+your choice.
 
 ## Installation
 
-    $ composer require martinbean/laravel-sluggable-trait
+    $ composer require mvnrsa/laravel-sluggable-trait
 
 ## Usage
 
@@ -14,7 +17,7 @@ A trait you can apply to Eloquent models to have slugs automatically generated o
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use MartinBean\Database\Eloquent\Sluggable;
+use mvnrsa\Database\Eloquent\Sluggable;
 
 class Item extends Model
 {
@@ -31,7 +34,7 @@ If you need to change these, you can override the getter methods:
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use MartinBean\Database\Eloquent\Sluggable;
+use mvnrsa\Database\Eloquent\Sluggable;
 
 class Item extends Model
 {
