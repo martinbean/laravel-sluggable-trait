@@ -1,7 +1,7 @@
 {
     "name": "mvnrsa/laravel-sluggable-trait",
     "description": "A trait you can apply to Eloquent models to have slugs automatically generated on save. A slight omprovement on martinbean/laravel-sluggable-trait to use underscore (or any other character) instead of dash in slugs.",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "type": "library",
     "keywords": ["laravel", "eloquent"],
     "license": "MIT",
@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "mvnrsa\\Database\\Eloquent\\": "src/"
+            "mvnrsa\\Traits\\": "src/"
         }
     }
 }

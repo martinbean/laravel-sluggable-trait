@@ -1,6 +1,6 @@
 <?php
 
-namespace mvnrsa\Database\Eloquent;
+namespace mvnrsa\Traits;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
