@@ -16,7 +16,7 @@ trait Sluggable
     {
         static::saving(function (Model $model) {
             if (empty($model->getSlug())) {
-                $model->setSlug(Str::slug($model->getSluggableString(),$this->getSlugCharacter()));
+                $model->setSlug(Str::slug($model->getSluggableString(),$model->getSlugCharacter()));
             }
         });
     }
