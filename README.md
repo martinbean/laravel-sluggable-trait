@@ -51,11 +51,11 @@ class Item extends Model
         return 'headline';
     }
 
-	/* Optional */
-	public function getSlugCharacter()
-	{
-		return '_';
-	}
+    /* Optional */
+    public function getSlugCharacter()
+    {
+        return '_';
+    }
 }
 ```
 
@@ -93,7 +93,8 @@ public function getSluggableString()
 ```
 
 The `getSlugCharacter()` should return the character you want to use as
-replacement in slugs.  Default is dash (-).
+replacement in slugs.  
+My default is an underscore (\_).
 
 ```php
 /**
