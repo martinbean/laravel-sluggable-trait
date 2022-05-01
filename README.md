@@ -50,6 +50,12 @@ class Item extends Model
     {
         return 'headline';
     }
+
+	/* Optional */
+	public function getSlugCharacter()
+	{
+		return '_';
+	}
 }
 ```
 
