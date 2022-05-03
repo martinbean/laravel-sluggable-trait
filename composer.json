@@ -1,28 +1,43 @@
 {
     "name": "martinbean/laravel-sluggable-trait",
     "description": "A trait you can apply to Eloquent models to have slugs automatically generated on save.",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "type": "library",
     "keywords": ["laravel", "eloquent"],
+    "readme": "README.md",
     "license": "MIT",
     "authors": [
         {
             "name": "Martin Bean",
-            "email": "martin@martinbean.co.uk"
+            "homepage": "https://martinbean.dev"
         }
     ],
     "support": {
         "issues": "https://github.com/martinbean/laravel-sluggable-trait/issues",
         "source": "https://github.com/martinbean/laravel-sluggable-trait"
     },
+    "funding": [
+        {
+            "type": "buymeacoffee",
+            "url": "https://www.buymeacoffee.com/martinbean"
+        }
+    ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/database": ">=4.0",
-        "illuminate/support": ">=4.0"
+        "laravel/framework": ">=5.0"
     },
     "autoload": {
         "psr-4": {
             "MartinBean\\Database\\Eloquent\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MartinBean\\Database\\Eloquent\\SluggableServiceProvider"
+            ]
         }
     }
 }

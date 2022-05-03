@@ -16,19 +16,9 @@ trait Sluggable
     {
         static::saving(function (Model $model) {
             if (empty($model->getSlug())) {
-                $model->setSlug(Str::slug($model->getSluggableString()));
+                $model->setSlug(Str::slug($model->getSluggableString(), $model->getSlugSeparator()));
             }
         });
-    }
-
-    /**
-     * The name of the column to use for slugs.
-     *
-     * @return string
-     */
-    public function getSlugColumnName()
-    {
-        return 'slug';
     }
 
     /**
@@ -55,12 +45,32 @@ trait Sluggable
     }
 
     /**
+     * The name of the column to use for slugs.
+     *
+     * @return string
+     */
+    protected function getSlugColumnName()
+    {
+        return 'slug';
+    }
+
+    /**
      * Get the string to create a slug from.
      *
      * @return string
      */
-    public function getSluggableString()
+    protected function getSluggableString()
     {
         return $this->getAttribute('name');
+    }
+
+    /**
+     * The character to use to separate words.
+     *
+     * @return string
+     */
+    protected function getSlugSeparator()
+    {
+        return config('sluggable.separator');
     }
 }
